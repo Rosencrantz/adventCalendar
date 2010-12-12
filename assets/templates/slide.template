@@ -1,0 +1,11 @@
+<section id="slide<%=slideId%>" class="slide <%=className%>">
+  <header>
+    <h1><%=header%></h1>
+  </header>
+  <div class="slideContent">
+    <%=content%>
+  </div>
+  <a href="<%=close%>" class="close">X</a>    
+  <a href="<%=next%>" class="next" id="next<%=slideId%>" style="display: <%=next.length > 0 ? 'block' : 'none'%>">Next</a> 
+  <a href="<%=previous%>" class="previous" id="next<%=slideId%>" style="display: <%=previous.length > 0 ? 'block' : 'none'%>">Previous</a>
+</section>

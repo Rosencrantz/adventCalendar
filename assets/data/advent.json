@@ -1,0 +1,65 @@
+[{ 
+  "id": 0, 
+  "linkText": "1", 
+  "adventPanel": "<a href='#/0/slides'><img src='assets/img/castle.png' width='160 height='126' alt='A fairytale castle' title='Castle' /></a>", 
+  "slides": [{
+    "slideId": 0,
+    "className": "",
+    "header": "What is Sammy.js",
+    "close": "#/0",
+    "next": "",
+    "previous": "",
+    "content": "<ul><li>A tiny javascript framework built on top of jQuery.</li><li>RESTful Evented JavaScript.</li><li>A way of allowing you to respond to specific URLS.</li><li>A way of creating single page applications that still respond to the back button</li></ul>"
+    }]
+},
+{ 
+  "id": 1, 
+  "linkText": "2", 
+  "adventPanel": "<a href='#/1/slides'><img src='assets/img/reindeer.png' width='160' height='126' alt='A reindeer' title='Rudolf' /></a>", 
+  "slides": [{
+    "slideId": 0,
+    "className": "",
+    "header": "Sammy, A brief history",
+    "close": "#/1",
+    "next": "",
+    "previous": "",
+    "content": "<p>TBC</p>"
+    }]
+},
+{ 
+  "id": 2, 
+  "linkText": "3", 
+  "adventPanel": "<a href='#/2/slides'><img src='assets/img/mistletoe.png' width='160' height='126' alt='Some Mistletoe' title='Pucker up!' /></a>", 
+  "slides": [{
+    "slideId": 0,
+    "className": "",
+    "header": "The Sammy core. Creating Routes",
+    "close": "#/2",
+    "next": "#/2/slides/1",
+    "previous": "",
+    "content": "<ul><li>A route can be thought of as an http request. It contains a verb, a path and a callback</li><li>A route can be defined directy using the route() function or by using one of the verb shortcuts: get(), post() put(), delete()</li></ul>"
+    },
+    {
+    "slideId": 1,
+    "className": "code",
+    "header": "Creating Routes. Example",
+    "close": "#/2",
+    "next": "",
+    "previous": "#/2/slides/0",
+    "content": "<p><pre><code>//Define a route using the built in get wrapper<br />this.get('#/', function(context) {<br />&nbsp;&nbsp;context.log('Ho Ho Ho'!)<br />});</code><pre></p><br /><br /><p><pre><code>//Define a route using the route method<br />this.route('get', '#/', function(context) {<br />&nbsp;&nbsp;context.log('Ho Ho Ho!');<br />});</code><pre></p>"
+    }]
+},
+{ 
+  "id": 3, 
+  "linkText": "4", 
+  "adventPanel": "<a href='#/3/slides'><img src='assets/img/snowman.png' width='160 height='126' alt='A snowman' title='The snowman family' /></a>", 
+  "slides": [{
+    "slideId": 0,
+    "className": "",
+    "header": "Verbs",
+    "close": "#/3",
+    "next": "",
+    "previous": "",
+    "content": "<ul><li>There are four verbs available to the developer: get, post, put &amp; delete</li><li>These behave like their http namesakes</li><li>Three of the four available routes (put, post, delete) are only triggered on form submission.</li></ul>"
+    }]
+}]

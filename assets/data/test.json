@@ -1,0 +1,42 @@
+[{"id": 0, 
+    "date": "one", 
+    "linkText": "1", 
+    "adventPanel": "<p><a href='#/0/slides/0'><img src='assets/img/castle.png' /></a>Once upon a time...</p>", 
+    "slides": [{
+      "slideId": 0,
+      "slideContent": "<section><header><h1>What is Sammy?</h1></header></section>",
+      "codeExmaples": [
+	{
+	  "codeId": 0,
+	  "codeContent": "<p>code content 1</p>"
+	},
+	{
+	  "codeId": 1,
+	  "codeContent": "<p>code content 2</p>"
+	},
+	{
+	  "codeId": 2,
+	  "codeContent": "<p>code content 3</p>"
+	}
+      ]
+    },
+    { 
+      "slideId": 1,
+      "slideContent": "<p>This is the first second",
+      "codeExmaples": [
+	{
+	  "codeId": 1,
+	  "codeContent": "<p>code content 1</p>"
+	},
+	{
+	  "codeId": 2,
+	  "codeContent": "<p>code content 2</p>"
+	},
+	{
+	  "codeId": 3,
+	  "codeContent": "<p>code content 3</p>"
+	}
+      ]
+    }
+  ]
+}]
