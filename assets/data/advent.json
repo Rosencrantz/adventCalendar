@@ -9,7 +9,15 @@
     "close": "#/0",
     "next": "",
     "previous": "",
-    "content": "<ul><li>A tiny javascript framework built on top of jQuery.</li><li>RESTful Evented JavaScript.</li><li>A way of allowing you to respond to specific URLS.</li><li>A way of creating single page applications that still respond to the back button</li></ul>"
+    "content": 
+    "
+      <ul>
+	<li>Small javascript framework built on top of jQuery.</li>
+	<li>RESTful Evented JavaScript.</li>
+	<li>A way of allowing you to respond to specific URLS.</li>
+	<li>A way of creating single page applications that still respond to the back button</li>
+      </ul>
+    "
     }]
 },
 { 
@@ -23,7 +31,14 @@
     "close": "#/1",
     "next": "",
     "previous": "",
-    "content": "<p>TBC</p>"
+    "content": 
+    "
+      <ul>
+	<li>Written By Aaron Quint</li>
+	<li>AQ, wanted to give developers a way to easily define routes and structure within an application</li>
+	<li>Originally wanted to create sinatra in javascript, but the api has developed into more this</li>
+      </ul>
+    "
     }]
 },
 { 
@@ -33,20 +48,60 @@
   "slides": [{
     "slideId": 0,
     "className": "",
-    "header": "The Sammy core. Creating Routes",
+    "header": "Sammy Basics",
     "close": "#/2",
     "next": "#/2/slides/1",
     "previous": "",
-    "content": "<ul><li>A route can be thought of as an http request. It contains a verb, a path and a callback</li><li>A route can be defined directy using the route() function or by using one of the verb shortcuts: get(), post() put(), delete()</li></ul>"
+    "content": 
+    "
+      <ul>
+	<li>Sammy applications revolve around the concept of a route.</li>
+	<li>A route consists of 3 arguments: verb, path and callback</li>
+	<li>Routes exist as part of a Sammy application and can be bound to custom events</li>
+      </ul>
+    "
+    },
+    {
+    "slideId": 1,
+    "className": "",
+    "header": "Sammy Basics",
+    "close": "#/2",
+    "next": "",
+    "previous": "#/2/slides/0",
+    "content": 
+    "
+      <ul>
+	<li>Routes exits as part of an application</li>
+	<li>An application can be setup by passing a function to $.sammy</li>
+	<li>$.sammy is a shortcut to the Sammy.Application constructor</li>
+	<li>Within the application this represents the application and is used to create and configure routes</li>
+      </ul>
+    "
     },
     {
     "slideId": 1,
     "className": "code",
-    "header": "Creating Routes. Example",
+    "header": "Sammy Basics: Helloworld",
     "close": "#/2",
     "next": "",
     "previous": "#/2/slides/0",
-    "content": "<p><pre><code>//Define a route using the built in get wrapper<br />this.get('#/', function(context) {<br />&nbsp;&nbsp;context.log('Ho Ho Ho'!)<br />});</code><pre></p><br /><br /><p><pre><code>//Define a route using the route method<br />this.route('get', '#/', function(context) {<br />&nbsp;&nbsp;context.log('Ho Ho Ho!');<br />});</code><pre></p>"
+    "content": 
+    "<p><pre><code>
+		  //Define the application<br />
+		  var app = $.sammy(function() {
+		    
+		  &nbsp;//Create a route
+		    this.get('#/', function() {
+		      $('body').append('Merry Christmas!');	
+		    });
+    
+		  });
+		  
+		  //run the application with the default route specified
+		  (function() {
+		    app.run('#/');
+		  })();
+    "
     }]
 },
 { 

@@ -1,0 +1,15 @@
+<p><pre><code>
+<span class="comment">//Define the application</span>
+var app = $.sammy(function() {
+    
+  <span class="comment">//Create a route</span>
+  this.get('#/', function() {
+    $('body').append('Merry Christmas!');	
+  });
+});
+		  
+<span class="comment">//run the application with the default route specified</span>
+(function() {
+  app.run('#/');
+})();
+</code></pre></p>

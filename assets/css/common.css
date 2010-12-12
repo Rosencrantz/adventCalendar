@@ -23,12 +23,17 @@ a {
 }
 
 h1 {
-  margin-bottom: 2em;
+  margin-bottom: 20px;
 }
 
 code {
-  font-size: 0.8em;
+  white-space: pre;
 }
+
+code .comment {
+  color: #666;
+}
+
 ul {
   margin: 15px;
   padding-left: 20px;
@@ -39,6 +44,15 @@ ul li {
   margin: 15px 0;
   line-height: 1.4;
   text-shadow: 1px 1px 5px rgba(255,255,255,0.4);
+}
+
+h2 {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+p {
+  margin-bottom: 15px;
 }
 
 .group:after {
@@ -140,87 +154,87 @@ ul li {
   background-position: 0px -420px;
 }
 
-#five .door .front {
+#advent4 .door .front {
   background-position: 0px -560px;
 }
 
-#six .door .front {
+#advent5 .door .front {
   background-position: 0px -699px;
 }
 
-#seven .door .front {
+#advent6 .door .front {
   background-position: 0px -839px;
 }
 
-#eight .door .front {
+#advent7 .door .front {
   background-position: 0px -979px;
 }
 
-#nine .door .front {
+#advent8 .door .front {
   background-position: 0px -1119px;
 }
 
-#ten .door .front {
+#advent9 .door .front {
   background-position: 0px -1259px;
 }
 
-#eleven .door .front {
+#advent10 .door .front {
   background-position: 0px -1399px;
 }
 
-#twelve .door .front {
+#advent11 .door .front {
   background-position: 0px -1539px;
 }
 
-#thirteen .door .front {
+#advent12 .door .front {
   background-position: 0px -1679px;
 }
 
-#fourteen .door .front {
+#advent13 .door .front {
   background-position: 0px -1819px;
 }
 
-#fifteen .door .front {
+#advent14 .door .front {
   background-position: 0px -1959px;
 }
 
-#sixteen .door .front {
+#advent15 .door .front {
   background-position: 0px -2099px;
 }
 
-#seventeen .door .front {
+#advent16 .door .front {
   background-position: 0px -2239px;
 }
 
-#eighteen .door .front {
+#advent17 .door .front {
   background-position: 0px -2379px;
 }
 
-#nineteen .door .front {
+#advent18 .door .front {
   background-position: 0px -2519px;
 }
 
-#twenty .door .front {
+#advent19 .door .front {
   background-position: 0px -2659px;
 }
 
-#twentyOne .door .front {
+#advent20 .door .front {
   background-position: 0px -2799px;
 }
 
-#twentyTwo .door .front {
+#advent21 .door .front {
   background-position: 0px -2939px;
 }
 
-#twentyThree .door .front {
+#advent22 .door .front {
   background-position: 0px -3079px;
 }
 
-#twentyFour .door .front {
+#advent23 .door .front {
   background-position: 0px -3219px;
 }
 
-#five, #ten, #fifteen, #twenty, #twentyFive {
+#advent4, #advent9, #advent14, #advent19, #advent24 {
   margin-right: 0;
 }
 
@@ -243,9 +257,9 @@ ul li {
   position: relative;
   width: 800px;
   height: 600px;
-  margin: 200px auto;
+  margin: 75px auto;
   overflow: hidden;
-  font-size: 2em; 
+  font-size: 1.5em; 
   color: #333;
 
 }
