@@ -1,5 +1,17 @@
-<ul>
-	<li>Sammy.Application is the base prototype for defining applications</li>
-	<li>An application can be defined as a collection of routes and bound events that are attached to an element when .run() is called</li>
-	<li>Sammy.Application takes a single argrument app_function that is evaluated within the context of the application</li>
-</ul>
+<h1>Sketching sammy</h1>
+<p><pre><code>
+<span class="comment">// example app</span>
+(function($) {
+  
+  get('#/path', function() {
+    this // == Request object
+    this.params <span class="comment">//query string params as JS object</span>
+    redirect('/path2'); <span class="comment">//redirects</span>
+    render('text'); <span class="comment">//replaces specified area or body</span>
+  });
+  
+  get('/path/:id', function(id) {}); <span class="comment">// matches /:id and sends as arg to function</span>
+  post('/path', function() {}); <span class="comment">// all forms are disabled and submits are watched for and passed to post/put</span>
+  clicked() <span class="comment">// events are also bound</span>
+  helpers(function() {}); <span class="comment">// methods are defined with in the apps namespace</span>
+})(jQuery);</code></pre></p>
