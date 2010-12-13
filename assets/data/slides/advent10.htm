@@ -1,0 +1,22 @@
+<h1>Creating, binding &amp; triggering events</h1>
+<p><pre><code>
+var app = $.sammy(function() {
+  this.get('#/:id', function(context) {
+    <span class="comment">//Display the advent item</span>
+    this.trigger('hideSlide');
+  });
+
+	this.bind('hideSlide', function(e, data) {
+		<span class="comment">//hide an existing slide</span>
+	});
+
+  this.bind('webkitTransitionEnd', function(e, data) {
+    <span class="comment">//Bound to existing event, displays a slide once a door is opened</span>
+  });
+});
+
+
+$(function() {   
+  app.run();
+}); 
+</code></pre></p>

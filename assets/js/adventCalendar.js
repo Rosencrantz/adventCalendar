@@ -1,8 +1,6 @@
 (function($) { 
-
-  var app = $.sammy('#calendar', function() {
+  	var app = $.sammy('#calendar', function() {
     this.use(Sammy.Template);
-    var that = this;
 
     this.swap = function(content) {
       $(this.$element().children('.group')[0]).append(content);
@@ -10,95 +8,65 @@
   
     //Wraps around each request. Load up the data
     this.around(function(callback) {
-      var context = this;
-	this.load('assets/data/advent2.json')
-	  .then(function(items) {
-	    context = this;
-	    context.wait();
-	    context.items = items;
-	  })
-	  .then(function() {
-	    if($('#calendar > .group').contents().length == 0) {
-	      this.renderEach('assets/templates/item.template', context.items).appendTo($('#calendar > .group')[0])
-		  .then(function() {
-		    if(~this.event_context.path.indexOf('slides')) {
-		      this.trigger('multiOpen', {id: this.event_context.params.id});
-		      this.renderEach('assets/templates/slide.template', this.items[this.event_context.params.id].slides).appendTo($('#modal #content'))
-			  .then(callback);
-		    } else {
-		      callback();
-		    }
-		  });
-	    } else {
-	      if(~this.event_context.path.indexOf('slides')) {
-		this.renderEach('assets/templates/slide.template', this.items[this.event_context.params.id].slides).appendTo($('#modal #content'))
-		    .then(callback);
-	      } else {
-		callback();
-	      }
-	    }
-	  })
+		var context = this;
+		this.load('assets/data/advent2.json').then(function(items) {
+	    	context.items = items;
+	  	}).then(function() {
+	    	if($('#calendar > .group').contents().length == 0) {
+	    		this.renderEach('assets/templates/item.template', context.items).appendTo($('#calendar > .group')[0]).then(callback);
+	    	}	
+			callback();
+	  	});
     });
 
     this.get('#/', function(context) {
       this.trigger('closeModal');
     });
     
+	//Display the advent item
     this.get('#/:id', function(context) {
-      $('#modal').hide();
-      var item = $('a[href=' + this.path + ']').parents('.item');
+      this.trigger('hideSlide');
+	  this.trigger('openAdvent', {id: this.params.id, path: this.path});
+    });
+
+	//Load the data for the slide and trigger display
+    this.get('#/:id/slide', function(context) {
+		this.trigger('hideSlide');
+		var that = this;
+		this.render('assets/templates/slide.template', {id: this.params.id, close: this.path.replace('/slide','')}).appendTo($('#modal #content'))
+		.then(function() {that.trigger('showSlide', {id: that.params.id, path: context.items[that.params.id].slide})});
+    });
+
+	//display the slide
+	this.bind('showSlide', function(e, data) {
+		$.get(data['path'], function(content) {
+			$('#slide' + data['id'] + ' .slideContent').html('').html(content);
+			$('#slide' + data['id']).addClass('view');
+			$('#modal').show();
+		});
+	});
+	
+	//hides a slide from view
+	this.bind('hideSlide', function(e, data) {
+		$('#modal').hide();
+		$('#modal #content').html('');
+	});
+
+	//opens the door on an advent calendar
+    this.bind('openAdvent', function(e, data) {
+      var item = $('a[href=' + data['path'] + ']').parents('.item');
       item.addClass('open');
     });
 
-    this.get('#/:id/slides', function(context) {
-      $('#modal #content').html('');
-      this.redirect(context.path + '/0');
-    });
-    
-    this.get('#/:id/slides/:slide', function(context) {
-      var slideId = '#slide' + this.params.slide;
-      var adventId = '#advent' + this.params.id;
-
-      $(slideId + ' ~ .view').removeClass('view');
-      $.get('assets/data/slides/' + adventId.replace('#','') + '_' + slideId.replace('#','') + '.htm', function(data) {
-	$(slideId + ' > .slideContent').html('').html(data);
-        $(slideId).addClass('view');
-      });
-      $('#modal').show();
-    });
-
-    this.bind('show', function(e, data) {
-      
-      $(data['item'].selector).prevAll().addClass('view');
-      data['item'].addClass('view');
-      $(data['item'].selector).nextAll().removeClass('view');
-
-    });
-
-    this.bind('hide', function(e, data) {
-      data['item'].removeClass('view');
-    });
-
-    this.bind('closeModal', function(e, data) {
-      $('#modal').hide();
-      $('#modal .slide').html('');
-      $('#modal .codeExample').html('');
-    });
-
-    this.bind('open', function(e, data) {
-      var item = $('a[href=' + data['adventId'] + ']').parents('.item');
-      item.addClass('open');
-    });
-
-    this.bind('multiOpen', function(e, data) {
-      for(var i =0; i <= Number(data['id']); i++) {
-	this.trigger('open', {adventId: '#/' + i});
-      }
-    });
-    
+	//displays a slide once a door is opened
+    this.bind('webkitTransitionEnd', function(e, data) {
+		if($(e.target).hasClass('adventContent')) {
+	  		this.redirect($(e.target).children('a').attr('href'));
+		}
+    }); 
   });
 
-  $(function() {
+  $(function() {   
     app.run('#/');
   });
 
