@@ -1,7 +1,8 @@
-<h1>Creating the application</h1>
+<h1>Making it useful. Defining some routes</h1>
 <ul>
-	<li>Sammy.Application is the base prototype for defining applications. Generally we use the shortcut $.sammy()</li>
-	<li>An application is a collection of routes and bound events that are attached to an element when .run() is called</li>
-	<li>Sammy.Application takes a single argument <em>app_function</em> that is evaluated within the context of the application</li>
-	<li>Within the context of the application 'this' relates to the application itself</li>
+  <li>Routes are the main building blocks of a sammy application</li>
+  <li>A route is made up of a verb, a path and a callback function</li>
+  <li>The verb can be one of: 'get', 'post', 'put' or 'delete. Of these 'get' is the most commonly used because...</li>
+  <li>'post', 'put' and 'delete' are only invoked on form submission</l1>
+  <li>Within the callback of a route 'this' is a new <em>Sammy.EventContext</em>. This has a number of handy methods and attributes like <em>redirect</em> or <em>render</em></li>
 </ul>

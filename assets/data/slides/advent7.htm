@@ -1,8 +1,7 @@
-<h1>Making it useful. Defining some routes</h1>
+<h1>Events. Defining, binding and triggering</h1>
 <ul>
-  <li>Routes are the main building blocks of a sammy application</li>
-  <li>A route is made up of a verb, a path and a callback function</li>
-  <li>The verb can be one of: 'get', 'post', 'put' or 'delete. Of these 'get' is the most commonly used because...</li>
-  <li>'post', 'put' and 'delete' are only invoked on form submission</l1>
-  <li>Within the callback of a route 'this' is a new <em>Sammy.EventContext</em>. This has a number of handy methods and attributes like <em>redirect</em> or <em>render</em></li>
+  <li>Events in sammy are designed to be created in the same way as in jQuery</li>
+  <li>Internally events are bound to the application within a unique application namespace</li>
+  <li>This means you can run multiple sammy applications without having to worry about multiple events being triggered.</li>
+  <li>Trigger causes an event to be raised, can be raised within the context of the application or within other events/routes</li>
 </ul>

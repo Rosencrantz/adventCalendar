@@ -1,0 +1,23 @@
+<h1>The Template plugin</h1>
+<p><pre><code>
+  var app = $.sammy(function() {
+    this.use(Sammy.Template);
+
+    //Wraps around each request. Load up the data
+    this.around(function(callback) {
+      var context = this;
+      this.load('assets/data/advent2.json')
+      .then(function(items) {
+    	  context.items = items;
+  	  })
+  	  .then(function() {
+    	  if(!$('#calendar > .group').contents().length) {
+    		  this.renderEach('assets/templates/item.template', context.items)
+  		    .appendTo($('#calendar > .group')[0])
+  		    .then(callback);
+    	  }	
+  	    callback();
+  	  });
+    });
+  });
+</code></pre></p>

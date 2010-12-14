@@ -1,22 +1,24 @@
-<h1>Creating, binding &amp; triggering events</h1>
+<h1>Using load to get some data</h1>
 <p><pre><code>
-var app = $.sammy(function() {
-  this.get('#/:id', function(context) {
-    <span class="comment">//Display the advent item</span>
+var app = $.sammy('#calendar', function() {
+  this.use(Sammy.Template);
+  
+  <span class="comment">//Load the data for the slide and trigger display</span>
+  this.get('#/:id/slide', function(context) {
     this.trigger('hideSlide');
+    var appContext = this;
+    this.render('assets/templates/slide.template', { id: this.params.id, close: this.path.replace('/slide','')})
+    .appendTo($('#modal #content'))
+    .then(function() { 
+      appContext.trigger('showSlide', {id: appContext.params.id, path: context.items[appContext.params.id].slide})});
   });
 
-	this.bind('hideSlide', function(e, data) {
-		<span class="comment">//hide an existing slide</span>
-	});
-
-  this.bind('webkitTransitionEnd', function(e, data) {
-    <span class="comment">//Bound to existing event, displays a slide once a door is opened</span>
-  });
+  <span class="comment">//load up our slide data and add it into the document</span>
+  this.bind('showSlide', function(e, data) {
+  	this.load(data['path']).then(function(content) {
+  		$('#slide' + data['id'] + ' .slideContent').html(content);
+  		$('#slide' + data['id']).addClass('view');
+  		$('#modal').show();			
+  	});
 });
-
-
-$(function() {   
-  app.run();
-}); 
 </code></pre></p>

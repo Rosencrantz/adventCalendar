@@ -1,120 +1,90 @@
 [{ 
   "id": 0, 
   "linkText": "1", 
-  "adventPanel": "<a href='#/0/slides'><img src='assets/img/castle.png' width='160 height='126' alt='A fairytale castle' title='Castle' /></a>", 
-  "slides": [{
-    "slideId": 0,
-    "className": "",
-    "header": "What is Sammy.js",
-    "close": "#/0",
-    "next": "",
-    "previous": "",
-    "content": 
-    "
-      <ul>
-	<li>Small javascript framework built on top of jQuery.</li>
-	<li>RESTful Evented JavaScript.</li>
-	<li>A way of allowing you to respond to specific URLS.</li>
-	<li>A way of creating single page applications that still respond to the back button</li>
-      </ul>
-    "
-    }]
+  "adventPanel": "<a href='#/0/slide'><img src='assets/img/castle.png' width='160 height='126' alt='A fairytale castle' title='Castle' /></a>", 
+  "slide": "assets/data/slides/advent0.htm"
 },
 { 
   "id": 1, 
   "linkText": "2", 
-  "adventPanel": "<a href='#/1/slides'><img src='assets/img/reindeer.png' width='160' height='126' alt='A reindeer' title='Rudolf' /></a>", 
-  "slides": [{
-    "slideId": 0,
-    "className": "",
-    "header": "Sammy, A brief history",
-    "close": "#/1",
-    "next": "",
-    "previous": "",
-    "content": 
-    "
-      <ul>
-	<li>Written By Aaron Quint</li>
-	<li>AQ, wanted to give developers a way to easily define routes and structure within an application</li>
-	<li>Originally wanted to create sinatra in javascript, but the api has developed into more this</li>
-      </ul>
-    "
-    }]
+  "adventPanel": "<a href='#/1/slide'><img src='assets/img/reindeer.png' width='160' height='126' alt='A reindeer' title='Rudolf' /></a>", 
+  "slide": "assets/data/slides/advent1.htm"
 },
 { 
   "id": 2, 
   "linkText": "3", 
-  "adventPanel": "<a href='#/2/slides'><img src='assets/img/mistletoe.png' width='160' height='126' alt='Some Mistletoe' title='Pucker up!' /></a>", 
-  "slides": [{
-    "slideId": 0,
-    "className": "",
-    "header": "Sammy Basics",
-    "close": "#/2",
-    "next": "#/2/slides/1",
-    "previous": "",
-    "content": 
-    "
-      <ul>
-	<li>Sammy applications revolve around the concept of a route.</li>
-	<li>A route consists of 3 arguments: verb, path and callback</li>
-	<li>Routes exist as part of a Sammy application and can be bound to custom events</li>
-      </ul>
-    "
-    },
-    {
-    "slideId": 1,
-    "className": "",
-    "header": "Sammy Basics",
-    "close": "#/2",
-    "next": "",
-    "previous": "#/2/slides/0",
-    "content": 
-    "
-      <ul>
-	<li>Routes exits as part of an application</li>
-	<li>An application can be setup by passing a function to $.sammy</li>
-	<li>$.sammy is a shortcut to the Sammy.Application constructor</li>
-	<li>Within the application this represents the application and is used to create and configure routes</li>
-      </ul>
-    "
-    },
-    {
-    "slideId": 1,
-    "className": "code",
-    "header": "Sammy Basics: Helloworld",
-    "close": "#/2",
-    "next": "",
-    "previous": "#/2/slides/0",
-    "content": 
-    "<p><pre><code>
-		  //Define the application<br />
-		  var app = $.sammy(function() {
-		    
-		  &nbsp;//Create a route
-		    this.get('#/', function() {
-		      $('body').append('Merry Christmas!');	
-		    });
-    
-		  });
-		  
-		  //run the application with the default route specified
-		  (function() {
-		    app.run('#/');
-		  })();
-    "
-    }]
+  "adventPanel": "<a href='#/2/slide'><img src='assets/img/mistletoe.png' width='160' height='126' alt='Some Mistletoe' title='Pucker up!' /></a>", 
+  "slide": "assets/data/slides/advent2.htm"
 },
 { 
   "id": 3, 
   "linkText": "4", 
-  "adventPanel": "<a href='#/3/slides'><img src='assets/img/snowman.png' width='160 height='126' alt='A snowman' title='The snowman family' /></a>", 
-  "slides": [{
-    "slideId": 0,
-    "className": "",
-    "header": "Verbs",
-    "close": "#/3",
-    "next": "",
-    "previous": "",
-    "content": "<ul><li>There are four verbs available to the developer: get, post, put &amp; delete</li><li>These behave like their http namesakes</li><li>Three of the four available routes (put, post, delete) are only triggered on form submission.</li></ul>"
-    }]
+  "adventPanel": "<a href='#/3/slide'><img src='assets/img/nativity.png' width='160 height='126' alt='nativity' title='Nativity' /></a>", 
+  "slide": "assets/data/slides/advent3.htm"
+},
+{
+  "id": 4, 
+  "linkText": "5", 
+  "adventPanel": "<a href='#/4/slide'><img src='assets/img/elf.png' width='160 height='126' alt='An elf' title='A freaky lookin elf' /></a>", 
+  "slide": "assets/data/slides/advent4.htm"
+},
+{
+  "id": 5, 
+  "linkText": "6", 
+  "adventPanel": "<a href='#/5/slide'><img src='assets/img/santa.png' width='160 height='126' alt='Santa' title='Would not be christmas without santa' /></a>", 
+  "slide": "assets/data/slides/advent5.htm"
+},
+{
+  "id": 6, 
+  "linkText": "7", 
+  "adventPanel": "<a href='#/6/slide'><img src='assets/img/snowflake.png' width='160 height='126' alt='A snowflake' title='a snowflake' /></a>", 
+  "slide": "assets/data/slides/advent6.htm"
+},
+{
+  "id": 7, 
+  "linkText": "8", 
+  "adventPanel": "<a href='#/7/slide'><img src='assets/img/church.png' width='160 height='126' alt='A church' title='A church' /></a>", 
+  "slide": "assets/data/slides/advent7.htm"
+},
+{
+  "id": 8, 
+  "linkText": "9", 
+  "adventPanel": "<a href='#/8/slide'><img src='assets/img/unicorn.png' width='160 height='126' alt='A snowman' title='The snowman family' /></a>", 
+  "slide": "assets/data/slides/advent8.htm"
+},
+{
+  "id": 9, 
+  "linkText": "10", 
+  "adventPanel": "<a href='#/9/slide'><img src='assets/img/carolSingers.png' width='160 height='126' alt='Carol singers' title='Deck the halls' /></a>", 
+  "slide": "assets/data/slides/advent9.htm"
+},
+{
+  "id": 10, 
+  "linkText": "11", 
+  "adventPanel": "<a href='#/10/slide'><img src='assets/img/boy.png' width='160 height='126' alt='A small child' title='Some kid in snow' /></a>", 
+  "slide": "assets/data/slides/advent10.htm"
+},
+{
+  "id": 11, 
+  "linkText": "12", 
+  "adventPanel": "<a href='#/11/slide'><img src='assets/img/scene1.png' width='160 height='126' alt='A christmas scene' title='ooooh white christmas' /></a>", 
+  "slide": "assets/data/slides/advent11.htm"
+},
+{
+  "id": 12, 
+  "linkText": "13", 
+  "adventPanel": "<a href='#/12/slide'><img src='assets/img/sleighRide.png' width='160 height='126' alt='A sleigh ride' title='Weeee!' /></a>", 
+  "slide": "assets/data/slides/advent12.htm"
+},
+{
+  "id": 13, 
+  "linkText": "14", 
+  "adventPanel": "<a href='#/13/slide'><img src='assets/img/dove.png' width='160 height='126' alt='A dove' title='The dove of peace' /></a>", 
+  "slide": "assets/data/slides/advent13.htm"
+},
+{
+  "id": 14, 
+  "linkText": "15", 
+  "adventPanel": "<a href='#/14/slide'><img src='assets/img/bells.png' width='160 height='126' alt='Christmas bells' title='Christmas bells' /></a>", 
+  "slide": "assets/data/slides/advent14.htm"
 }]

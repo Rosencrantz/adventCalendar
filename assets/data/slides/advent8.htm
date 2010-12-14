@@ -1,20 +1,16 @@
-<h1>Creating routes</h1>
+<h1>Creating, binding &amp; triggering events</h1>
 <p><pre><code>
 var app = $.sammy(function() {
-  this.get('#/', function(context) {
-    <span class="comment">//The Default route</span>
-  });
-    
   this.get('#/:id', function(context) {
-    <span class="comment">//Open the advent door identified by the id</span>
+    this.trigger('hideSlide', {id: 42}); <span class="comment">//Display the advent item</span>
+  });
+  
+  this.bind('hideSlide', function(e, data) {
+    <span class="comment">//hide an existing slide</span>
   });
 
-  this.get('#/:id/slide', function(context) {
-    <span class="comment">//Display the slide for the give date</span>
+  this.bind('webkitTransitionEnd', function(e, data) {
+    <span class="comment">//Bound to existing event, displays a slide once a door is opened</span>
   });
-});
-
-$(function() {
-  app.run('#/'); <span class="comment">//run the application starting the default route</span>
 });
 </code></pre></p>

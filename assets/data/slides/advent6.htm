@@ -1,10 +1,20 @@
-<h1>The application</h1>
+<h1>Creating routes</h1>
 <p><pre><code>
-  var application = $.sammy(function() {
-    <span class="comment">//We define our routes in here</span>
+var app = $.sammy(function() {
+  this.get('#/', function() {
+    <span class="comment">//The Default route</span>
   });
-  
-  $(function() {
-      app.run(); <span class="comment">//Run the application</span>
+    
+  this.get('#/:id', function() {
+    <span class="comment">//Open the advent door identified by the id</span>
   });
+
+  this.route('get', '#/:id/slide', function() {
+    <span class="comment">//Display the slide for the give date</span>
+  });
+});
+
+$(function() {
+  app.run('#/'); <span class="comment">//run the application starting the default route</span>
+});
 </code></pre></p>

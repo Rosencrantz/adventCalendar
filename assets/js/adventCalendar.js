@@ -9,16 +9,19 @@
     //Wraps around each request. Load up the data
     this.around(function(callback) {
 		var context = this;
-		this.load('assets/data/advent2.json').then(function(items) {
+		this.load('assets/data/advent.json').then(function(items) {
 	    	context.items = items;
 	  	}).then(function() {
-	    	if($('#calendar > .group').contents().length == 0) {
-	    		this.renderEach('assets/templates/item.template', context.items).appendTo($('#calendar > .group')[0]).then(callback);
+	    	if(!$('#calendar > .group').contents().length) {
+	    		this.renderEach('assets/templates/item.template', context.items)
+				.appendTo($('#calendar > .group')[0])
+				.then(callback);
 	    	}	
 			callback();
 	  	});
     });
 
+	//Only really used when the application is first started
     this.get('#/', function(context) {
       this.trigger('closeModal');
     });
@@ -32,17 +35,20 @@
 	//Load the data for the slide and trigger display
     this.get('#/:id/slide', function(context) {
 		this.trigger('hideSlide');
-		var that = this;
-		this.render('assets/templates/slide.template', {id: this.params.id, close: this.path.replace('/slide','')}).appendTo($('#modal #content'))
-		.then(function() {that.trigger('showSlide', {id: that.params.id, path: context.items[that.params.id].slide})});
+		var appContext = this;
+		this.render('assets/templates/slide.template', {id: this.params.id, close: this.path.replace('/slide','')})
+		.appendTo($('#modal #content'))
+		.then(function() { 
+			appContext.trigger('showSlide', {id: appContext.params.id, path: context.items[appContext.params.id].slide})
+		});
     });
 
 	//display the slide
 	this.bind('showSlide', function(e, data) {
-		$.get(data['path'], function(content) {
-			$('#slide' + data['id'] + ' .slideContent').html('').html(content);
+		this.load(data['path']).then(function(content) {
+			$('#slide' + data['id'] + ' .slideContent').html(content);
 			$('#slide' + data['id']).addClass('view');
-			$('#modal').show();
+			$('#modal').show();			
 		});
 	});
 	
