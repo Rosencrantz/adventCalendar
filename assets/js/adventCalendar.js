@@ -1,9 +1,9 @@
 (function($) { 
-  	var app = $.sammy('#calendar', function() {
+  	var app = $.sammy('#calendar > .group', function() {
     this.use(Sammy.Template);
 
     this.swap = function(content) {
-      $(this.$element().children('.group')[0]).append(content);
+      $(this.$element()).append(content);
     };
   
     //Wraps around each request. Load up the data
@@ -14,7 +14,7 @@
 	  	}).then(function() {
 	    	if(!$('#calendar > .group').contents().length) {
 	    		this.renderEach('assets/templates/item.template', context.items)
-				.appendTo($('#calendar > .group')[0])
+				.appendTo(context.$element())
 				.then(callback);
 	    	}	
 			callback();

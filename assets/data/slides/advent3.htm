@@ -1,7 +1,8 @@
 <h1>And so, onto the application</h1>
 <ul>
-	<li>Sammy.Application is the base prototype for defining applications. Generally we use the shortcut $.sammy()</li>
-	<li>An application is a collection of routes and bound events that are attached to an element when .run() is called</li>
-	<li>Sammy.Application takes a single argument <em>app_function</em> that is evaluated within the context of the application</li>
-	<li>Within the context of the application 'this' relates to the application itself</li>
+	<li>Sammy.Application is the base prototype for defining applications. When creating a sammy application we use <em>$.sammy()</em></li>
+	<li>An application is a collection of routes and bound events that are attached to an element when <em>.run()</em> is called</li>
+	<li><em>Sammy.Application</em> requires single argument <em>app_function</em> that is evaluated within the context of the application</li>
+	<li>Also takes and optional argument that is the element to which you want to attach the application</li>
+	<li>Within the context of the application <em>this</em> relates to the application itself</li>
 </ul>

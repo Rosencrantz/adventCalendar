@@ -58,6 +58,9 @@ p {
   margin-bottom: 15px;
 }
 
+em {
+	color: #f90;
+}
 .group:after {
 	content: ".";
 	display: block;

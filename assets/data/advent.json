@@ -1,90 +1,90 @@
 [{ 
   "id": 0, 
   "linkText": "1", 
-  "adventPanel": "<a href='#/0/slide'><img src='assets/img/castle.png' width='160 height='126' alt='A fairytale castle' title='Castle' /></a>", 
+  "adventPanel": "<a href='#/0/slide'><img src='assets/img/castle.png' width='160' height='126' alt='A fairytale castle' title='The advent calendar presentation app' /></a>", 
   "slide": "assets/data/slides/advent0.htm"
 },
 { 
   "id": 1, 
   "linkText": "2", 
-  "adventPanel": "<a href='#/1/slide'><img src='assets/img/reindeer.png' width='160' height='126' alt='A reindeer' title='Rudolf' /></a>", 
+  "adventPanel": "<a href='#/1/slide'><img src='assets/img/reindeer.png' width='160' height='126' alt='A reindeer' title='What is Sammy' /></a>", 
   "slide": "assets/data/slides/advent1.htm"
 },
 { 
   "id": 2, 
   "linkText": "3", 
-  "adventPanel": "<a href='#/2/slide'><img src='assets/img/mistletoe.png' width='160' height='126' alt='Some Mistletoe' title='Pucker up!' /></a>", 
+  "adventPanel": "<a href='#/2/slide'><img src='assets/img/mistletoe.png' width='160' height='126' alt='Some Mistletoe' title='The Sammy sketch' /></a>", 
   "slide": "assets/data/slides/advent2.htm"
 },
 { 
   "id": 3, 
   "linkText": "4", 
-  "adventPanel": "<a href='#/3/slide'><img src='assets/img/nativity.png' width='160 height='126' alt='nativity' title='Nativity' /></a>", 
+  "adventPanel": "<a href='#/3/slide'><img src='assets/img/nativity.png' width='160' height='126' alt='nativity' title='The application' /></a>", 
   "slide": "assets/data/slides/advent3.htm"
 },
 {
   "id": 4, 
   "linkText": "5", 
-  "adventPanel": "<a href='#/4/slide'><img src='assets/img/elf.png' width='160 height='126' alt='An elf' title='A freaky lookin elf' /></a>", 
+  "adventPanel": "<a href='#/4/slide'><img src='assets/img/elf.png' width='160' height='126' alt='An elf' title='Application code example' /></a>", 
   "slide": "assets/data/slides/advent4.htm"
 },
 {
   "id": 5, 
   "linkText": "6", 
-  "adventPanel": "<a href='#/5/slide'><img src='assets/img/santa.png' width='160 height='126' alt='Santa' title='Would not be christmas without santa' /></a>", 
+  "adventPanel": "<a href='#/5/slide'><img src='assets/img/santa.png' width='160' height='126' alt='Santa' title='Creating routes' /></a>", 
   "slide": "assets/data/slides/advent5.htm"
 },
 {
   "id": 6, 
   "linkText": "7", 
-  "adventPanel": "<a href='#/6/slide'><img src='assets/img/snowflake.png' width='160 height='126' alt='A snowflake' title='a snowflake' /></a>", 
+  "adventPanel": "<a href='#/6/slide'><img src='assets/img/snowflake.png' width='160' height='126' alt='A snowflake' title='Routes code example' /></a>", 
   "slide": "assets/data/slides/advent6.htm"
 },
 {
   "id": 7, 
   "linkText": "8", 
-  "adventPanel": "<a href='#/7/slide'><img src='assets/img/church.png' width='160 height='126' alt='A church' title='A church' /></a>", 
+  "adventPanel": "<a href='#/7/slide'><img src='assets/img/church.png' width='160' height='126' alt='A church' title='Creating and defining events' /></a>", 
   "slide": "assets/data/slides/advent7.htm"
 },
 {
   "id": 8, 
   "linkText": "9", 
-  "adventPanel": "<a href='#/8/slide'><img src='assets/img/unicorn.png' width='160 height='126' alt='A snowman' title='The snowman family' /></a>", 
+  "adventPanel": "<a href='#/8/slide'><img src='assets/img/unicorn.png' width='160' height='126' alt='A snowman' title='Events example' /></a>", 
   "slide": "assets/data/slides/advent8.htm"
 },
 {
   "id": 9, 
   "linkText": "10", 
-  "adventPanel": "<a href='#/9/slide'><img src='assets/img/carolSingers.png' width='160 height='126' alt='Carol singers' title='Deck the halls' /></a>", 
+  "adventPanel": "<a href='#/9/slide'><img src='assets/img/carolSingers.png' width='160' height='126' alt='Carol singers' title='The load method' /></a>", 
   "slide": "assets/data/slides/advent9.htm"
 },
 {
   "id": 10, 
   "linkText": "11", 
-  "adventPanel": "<a href='#/10/slide'><img src='assets/img/boy.png' width='160 height='126' alt='A small child' title='Some kid in snow' /></a>", 
+  "adventPanel": "<a href='#/10/slide'><img src='assets/img/boy.png' width='160' height='126' alt='A small child' title='Load code example' /></a>", 
   "slide": "assets/data/slides/advent10.htm"
 },
 {
   "id": 11, 
   "linkText": "12", 
-  "adventPanel": "<a href='#/11/slide'><img src='assets/img/scene1.png' width='160 height='126' alt='A christmas scene' title='ooooh white christmas' /></a>", 
+  "adventPanel": "<a href='#/11/slide'><img src='assets/img/scene1.png' width='160' height='126' alt='A christmas scene' title='The around method' /></a>", 
   "slide": "assets/data/slides/advent11.htm"
 },
 {
   "id": 12, 
   "linkText": "13", 
-  "adventPanel": "<a href='#/12/slide'><img src='assets/img/sleighRide.png' width='160 height='126' alt='A sleigh ride' title='Weeee!' /></a>", 
+  "adventPanel": "<a href='#/12/slide'><img src='assets/img/sleighRide.png' width='160' height='126' alt='A sleigh ride' title='Around method example' /></a>", 
   "slide": "assets/data/slides/advent12.htm"
 },
 {
   "id": 13, 
   "linkText": "14", 
-  "adventPanel": "<a href='#/13/slide'><img src='assets/img/dove.png' width='160 height='126' alt='A dove' title='The dove of peace' /></a>", 
+  "adventPanel": "<a href='#/13/slide'><img src='assets/img/dove.png' width='160' height='126' alt='A dove' title='Working with templates' /></a>", 
   "slide": "assets/data/slides/advent13.htm"
 },
 {
   "id": 14, 
   "linkText": "15", 
-  "adventPanel": "<a href='#/14/slide'><img src='assets/img/bells.png' width='160 height='126' alt='Christmas bells' title='Christmas bells' /></a>", 
+  "adventPanel": "<a href='#/14/slide'><img src='assets/img/bells.png' width='160' height='126' alt='Christmas bells' title='Template example' /></a>", 
   "slide": "assets/data/slides/advent14.htm"
 }]

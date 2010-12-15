@@ -3,17 +3,12 @@
 var app = $.sammy('#calendar', function() {
   this.use(Sammy.Template);
   
-  <span class="comment">//Load the data for the slide and trigger display</span>
+  <span class="comment">//Trigger the display of our slide</span>
   this.get('#/:id/slide', function(context) {
-    this.trigger('hideSlide');
-    var appContext = this;
-    this.render('assets/templates/slide.template', { id: this.params.id, close: this.path.replace('/slide','')})
-    .appendTo($('#modal #content'))
-    .then(function() { 
-      appContext.trigger('showSlide', {id: appContext.params.id, path: context.items[appContext.params.id].slide})});
+    this.trigger('showSlide', {id: this.params.id, path: 'assets/data/slides/advent0.htm'})});
   });
 
-  <span class="comment">//load up our slide data and add it into the document</span>
+  <span class="comment">//load up our slide content and add it into the document</span>
   this.bind('showSlide', function(e, data) {
   	this.load(data['path']).then(function(content) {
   		$('#slide' + data['id'] + ' .slideContent').html(content);
